@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(43, 43, 43);
+}
+
+a{
+    text-decoration: none;
+}
+
+.coming_soon {
+    display: grid;
+    place-items: center;
+    margin-top: 50%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    background-color: #5865F2;
+    outline: 3px #104a95 solid;
+    outline-offset: -3px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.button .text {
+    color: white;
+    font-weight: 700;
+    font-size: 1.3em;
+    transition: 400ms;
+}
+
+.button img{
+    margin: 0;
+    fill: white;
+}
+
+.button:hover {
+    background-color: transparent;
+}
+
+@media screen and (min-width: 769px){
+
+    .coming_soon {
+        margin-top: 5%;
+    }
+}
