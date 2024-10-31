@@ -215,7 +215,7 @@ footer a {
 }
 
 .card a:hover {
-    color: red;
+    color:#F2E5A0;
 }
 
 .direitos-autorais, .desenvolvido-por {
@@ -262,7 +262,7 @@ footer a {
     background-color: transparent;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 760px) {
     ::-webkit-scrollbar {
         width: 10px;
     }
@@ -377,7 +377,7 @@ footer a {
 
     .card{
         width: 20vw;
-        height: 65vh;
+        height: auto;
         align-items: center;
     }
 
