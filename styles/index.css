@@ -1,22 +1,240 @@
 body {
-    background-color: rgb(43, 43, 43);
+    background-color: #0C2621;
 }
 
-a{
+nav {
+    display: none;
+}
+
+a {
     text-decoration: none;
 }
 
-.coming_soon {
+article {
     display: grid;
-    place-items: center;
-    margin-top: 50%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3);
+    grid-column-gap: 0;
+    grid-row-gap: 10px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #3D7354;
+    color: white;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes-sociais a {
+    padding-bottom: 1vh;
+}
+
+.redes-sociais p {
+    border-bottom: 0.2vh solid white;
+}
+
+footer a {
+    color: white;
+}
+
+.Logo-nome img {
+    margin: 2vw;
+}
+
+.Logo-nome {
+    display: flex;
+    align-items: center;
+    font-family: 'Berlin Sans FB';
+    color: #F2E5A0;
+    text-shadow: 0 0 3px #000000;
+    font-weight: bold;
+
+}
+
+.topnav {
+    background-color: #3D7354;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav #myLinks a {
+    border-bottom: 0.4vh solid #294c38;
+}
+
+.topnav a {
+    color: #F2E5A0;
+    padding: 4vw 2vh;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    color: #F2E5A0;
+}
+
+.active {
+    background-color: #3D7354;
+    color: white;
+}
+
+.primeira {
+    background-image: url("/imgs/BACKGROUND.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2vh;
+}
+
+.primeira .Shiv {
+    display: none;
+}
+
+.primeira p {
+    text-align: left;
+    margin-left: 5vw;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.55);
+    font-weight: bold;
+}
+
+.primeira .chamada {
+    font-weight: lighter;
+    color: rgb(186, 186, 186);
+    text-shadow: 2px 2px 9px rgb(0, 0, 0);
+    font-size: 0.8em;
+}
+
+.primeira .textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.segunda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.segunda h1 {
+    color: #F2E5A0;
+    border-bottom: solid 1.5vh #294a37;
+    border-radius: 30%;
+}
+
+.terceira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terceira h1 {
+    color: #F2E5A0;
+    border-bottom: solid 1.5vh #294a37;
+    border-radius: 30%;
+}
+
+.segunda p {
+    text-align: justify;
+    width: 80vw;
+}
+
+.card {
+    width: 40vw;
+    height: auto;
+    background: #171717;
+    transition: 1s ease-in-out;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+    padding: 3vh;
+}
+
+.card span {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+    margin-top: 1vh;
+}
+
+.card .info {
+    font-weight: 400;
+    color: white;
+    display: block;
+    text-align: justify;
+    font-size: 0.8em;
+    margin: 1em;
+}
+
+.card .img {
+    width: 4.8em;
+    height: 4.8em;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.card .share {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.card a {
+    color: white;
+    transition: 0.4s ease-in-out;
+}
+
+.card a:hover {
+    color: red;
+}
+
+.direitos-autorais, .desenvolvido-por {
+    color: rgba(255, 255, 255, 0.4);
+    background-color: #15251c;
+    text-align: center;
+    padding: 1vh;
+}
+
+.desenvolvido-por a{
+    text-decoration: none;
+    color:  rgba(255, 255, 255, 0.4);
 }
 
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 15px;
+    padding: 2vw;
     gap: 15px;
     background-color: #5865F2;
     outline: 3px #104a95 solid;
@@ -30,11 +248,12 @@ a{
 .button .text {
     color: white;
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1em;
     transition: 400ms;
+    margin: 0;
 }
 
-.button img{
+.button img {
     margin: 0;
     fill: white;
 }
@@ -43,9 +262,145 @@ a{
     background-color: transparent;
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 769px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
 
-    .coming_soon {
-        margin-top: 5%;
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: #000D0A;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #0a271e;
+    }
+
+    @keyframes go-up {
+        0% {
+            transform: translateY(100px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes go-left {
+        0% {
+            transform: translateX(-500px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .topnav a.icon {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 12vh;
+    }
+
+    header img {
+        width: 4vw;
+        height: 100%;
+    }
+
+    header p {
+        font-size: 1.7em;
+    }
+
+    nav {
+        display: flex;
+        position: sticky;
+        top: 0;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #3D7354;
+        font-size: 1.3em;
+        border: 0.4vh solid #294c38;
+        height: 7vh;
+        box-shadow: 0 11px 23px 3px rgba(0, 0, 0, 0.25);
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #F2E5A0;
+    }
+
+    nav a:hover {
+        border-bottom: 0.2vh solid #294c38;
+    }
+
+    .primeira .Shiv {
+        display: inherit;
+        animation: go-left 1.5s;
+    }
+
+    .primeira {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .button {
+        height: 15vh;
+    }
+
+    .button img {
+        width: 4vw;
+    }
+
+    .textos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5em;
+        width: 40vw;
+        animation: go-up 1.5s;
+    }
+
+    .segunda {
+        font-size: 1.3em;
+    }
+
+    .segunda p {
+        width: 40vw;
+    }
+
+    .card{
+        width: 20vw;
+        height: 65vh;
+        align-items: center;
+    }
+
+    .card .info{
+        font-size: 1.1em;
+        margin-bottom: 0;
+    }
+
+    .card span{
+        font-size: 1.3em;
+    }
+
+    .card img{
+        width: 13vw;
+        border-radius: 20%;
+    }
+
+    .terceira .cards{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .redes-sociais p{
+        font-size: 1.2em;
     }
 }
